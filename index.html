@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquidador Sueldos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="pages/about.html">Sobre nosotros</a>
+              </li>
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mb-5 py-3">
+
+     
+
+      <div class="my-5">
+      <h1 class="centrar">Liquidacion de sueldos</h1>
+      <h2 class="centrar">Complete los campos de los empleados de manera correcta para poder cargarlos a memoria</h2>
+      <p class="centrar"><b> HAY 10 EMPLEADOS PRECARGADOS QUE FIGURAN EN EL SOBRE NOSOTROS</b> </p>  
+      <p class="centrar"><b> RECORDAR QUE LA PAGINA ES VOLATIL NO USA EL LOCAL STORAGE</b> </p>  
+    </div>
+
+      <div class="centrar contenedor my-2">
+        <div>
+          <form>
+            <label for="codigoE" class="form-label">Codigo Empleado</label>
+            <input
+              id="codigoE"
+              class="form-control"
+              type="number"
+              placeholder="Ingrese el codigo del empleado"
+            />
+
+            <label for="nYa" class="form-label"
+              >Nombre y apellido del empleado
+            </label>
+            <input
+              id="nYa"
+              class="form-control"
+              type="text"
+              placeholder="Indique el nomre y apellido del empleado"
+            />
+
+            <label for="mes" class="form-label"
+            >Indique el mes
+          </label>
+          <input
+            id="mes"
+            class="form-control"
+            type="number"
+            placeholder="Recuerde marcar un numero del 1 al 12"
+          />
+         
+          <label for="anio" class="form-label"
+          >Indique el año corriente
+        </label>
+        <input
+          id="anio"
+          class="form-control"
+          type="number"
+          placeholder="Recuerde ingresar numero de año correctamente"
+        />
+        <label for="horas" class="form-label"
+        >Indique la cantidad horas trabajas
+      </label>
+      <input
+        id="horas"
+        class="form-control"
+        type="number"
+        placeholder="Indique la cantidad de horas trabajadas"
+      />
+      <label for="valor" class="form-label"
+      >Indique el valor de cada hora
+    </label>
+    <input
+      id="valor"
+      class="form-control"
+      type="number"
+      placeholder="$"
+    />
+            <!-- Submit button -->
+          </form>
+          <div class="centrar">
+            <button id="btn_inicio" onclick="resolucionA()" class="btn btn-dark btn-block my-2">
+              Agregar empleados
+            </button>
+          </div>
+          <div class="my-4">
+            <h1 class="centrar">Extras</h1>
+           
+          <button id="btn_uno" onclick="resolucionUno()" class="btn btn-dark btn-block my-2">
+            Total de empleados liquidados por año actual
+          </button>
+          <button id="btn_inicio" onclick="resolucionDos()" class="btn btn-dark btn-block my-2">
+            Total de empleados liquidados por mes y años actual 
+          </button>
+          <button id="btn_inicio"  onclick="resolucionTres()"class="btn btn-dark btn-block my-2">
+            Acumulados de sueldo por año actual
+          </button>
+          <button id="btn_inicio" onclick="resolucionCuatro()" class="btn btn-dark btn-block my-2">
+            Acumulados de sueldo por mes y año actual
+          </button>
+          <button id="btn_inicio" onclick="resolucionCinco()" class="btn btn-dark btn-block my-2">
+            Promedios de sueldo por mes y año
+          </button>
+        
+        </div>
+        </div>
+      </div>
+      
+      
+      <div class="centrar contendorTabla">
+        <h1 class="centrar mx-4">EMPLEADOS POR DEFECTO </h1>
+        <h3 class="centrar">SOMOS UNA EMPRESA CON EXPERIENCIA Y ESTOS SON NUESTROS EMPLEADOS</h3>
+        
+               
+        <div class=" mx-2 my-3 tabla">
+                <table class="table centrar  table-dark table-striped  ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre y Apellido</th>
+                <th scope="col">Mes</th>
+                <th scope="col">Año</th>
+                <th scope="col">Horas</th>
+                <th scope="col">Valor Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               
+            </tbody>
+          </table>
+        </div>
+    </div >
+
+    </main>
+
+    <footer class=" mt-3 navbar-dark bg-dark">
+      <div class="centrar">
+        <h5>Derechos Reservados° 2023</h5>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+    <script src="js/index.js"></script>
+  </body>
+</html>
